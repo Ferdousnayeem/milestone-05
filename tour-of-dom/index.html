@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tour Of DOM</title>
+    <style>
+      li {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="first-heading">Welcome to my DOM</h1>
+    </header>
+    <main>
+        <section>
+            <button onclick="console.log(35)">Click Me </button>
+            <button onclick="console.log(20)">Click Me </button>
+        </section>
+      <section>
+        <h1>section-1</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem qui,
+          perspiciatis sapiente quos architecto aperiam aliquid tempora
+          doloribus pariatur incidunt quam omnis explicabo laboriosam nesciunt
+          nostrum error minima, reiciendis commodi voluptatum sunt et. Vitae,
+          quis nihil dolorum incidunt nostrum distinctio aperiam tenetur
+          consequatur doloremque consequuntur fugiat, nesciunt pariatur eius
+          dolores.
+        </p>
+      </section>
+      <section>
+        <h1>section-2</h1>
+        <p>
+          Mollitia, rerum ad id saepe veniam facere incidunt temporibus
+          doloribus, placeat maxime a repellendus inventore cupiditate quasi
+          laudantium est officia quam? Numquam, quam officia ipsa, suscipit vel
+          nihil ad architecto nesciunt itaque saepe non voluptate necessitatibus
+          veritatis sapiente quo libero aut iure reiciendis, temporibus beatae
+          ducimus laboriosam sed? Nisi, ea.
+        </p>
+      </section>
+      <section>
+        <h1>section-3</h1>
+        <p>
+          Quae dicta, quos voluptatum reiciendis illo iste eveniet omnis nobis,
+          aperiam recusandae voluptates aliquam iusto deleniti dolorum ex enim
+          vitae explicabo ipsum libero veritatis odit aliquid. Voluptates dolore
+          eaque libero numquam aliquid et in recusandae dolorum sit obcaecati
+          eius dolores, dolor, unde quam ut. Omnis alias veniam minus minima
+          beatae.
+        </p>
+      </section>
+      <section>
+        <h1>My Awesome DOM de baba</h1>
+        <ul>
+          <li>Jalali Set</li>
+          <li>Shafayet</li>
+          <li>bonobash</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="js/dom.js"></script>
+    <script>
+      // console.log('inside html file!');
+      // console.log(document.getElementsByTagName('li'));
+      const liCollection = document.getElementsByTagName("li");
+      for (const li of liCollection) {
+        // console.log(li.innerText);
+      }
+    </script>
+  </body>
+</html>

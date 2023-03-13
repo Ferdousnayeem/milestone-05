@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="wclassth=device-wclassth, initial-scale=1.0"
+    />
+    <title>JavaScript Practice</title>
+  </head>
+  <body>
+    <!-- System - 01 (Direct Set) -->
+    <button class="event-btn" onclick="document.body.style.backgroundColor= 'blue'">Blue Button</button>
+
+    <!-- system - 02 (add onclick function on the html element) -->
+    <!-- important -->
+    <button class="event-btn" onclick="greenButton()">Green Button</button>
+
+    <!-- system - 03 (add onclick function in the javascript file) -->
+
+    <button class="event-btn" id="yellow-btn">Yellow Button</button>
+
+    <!-- system - 03 - alternative (add function directly in onclick function in the javascript file) -->
+
+    <button class="event-btn" id="red-btn">Red Button</button>
+
+    <!-- system - 04 (handle with event listener) -->
+
+    <button class="event-btn" id="purple-btn">Purple Button</button>
+
+    <!-- system - 05 (add function directly in event listener) -->
+
+    <button class="event-btn" id="skyblue-btn">SkyBlue Button</button>
+
+    <!-- system - 06 (short version of add function directly in event listener) -->
+    <!-- important -->
+    <button class="event-btn" id="orange-btn">Orange Button</button>
+
+
+    <section id="comment-section">
+        <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eum ipsa officia maxime sunt odit similique corrupti quaerat consequatur rem.</p>
+        <p class="comment">Tempore deleniti veniam optio cum dolor autem praesentium iste assumenda, animi temporibus sed odit ipsam aliquid culpa odio possimus eum.</p>
+        <p class="comment">Illum omnis saepe aspernatur est temporibus iusto architecto, molestiae in provident alias, repellat praesentium, laborum nisi eius sequi recusandae libero!</p>
+    </section>
+    <section>
+        <h1>Add your comment here</h1>
+        <textarea name="text-box" id="comment-box" cols="100" rows="8"></textarea>
+        <br>
+        <button id="post-btn">Post</button>
+    </section>
+
+    <script>
+        
+      // apply styles on button dynamically with JavaScript
+      const
+       buttons = document.querySelectorAll("button");
+    //   console.log(buttons);
+      for (const button of buttons) {
+        button.style.padding = "10px 20px";
+        button.style.border = "1px solid green";
+        button.style.borderRadius = "5px";
+        button.style.backgroundColor = "green";
+        button.style.color = "white";
+        button.style.fontWeight = "600";
+        button.style.fontSize = "14px";
+        button.style.letterSpacing = "1px";
+        button.style.cursor = "pointer";
+      }
+
+      //   system - 02 (add onclick function on the html element)
+      //   important
+      function greenButton() {
+        document.body.style.backgroundColor = "green";
+        const buttons = document.querySelectorAll("button");
+        console.log(buttons);
+        for (const button of buttons) {
+          button.style.padding = "10px 20px";
+          button.style.border = "1px solid red";
+          button.style.borderRadius = "5px";
+          button.style.backgroundColor = "green";
+          button.style.color = "white";
+          button.style.fontWeight = "600";
+          button.style.fontSize = "14px";
+          button.style.letterSpacing = "1px";
+          button.style.cursor = "pointer";
+        }
+      }
+
+      //   system - 03 (add onclick function in the javascript file)
+      const yellowButton = document.getElementById("yellow-btn");
+      yellowButton.onclick = yellowBtn;
+
+      function yellowBtn() {
+        document.body.style.backgroundColor = "yellow";
+      }
+
+      //   system - 03 - alternative (add function directly in onclick function in the javascript file)
+
+      const redButton = document.getElementById("red-btn");
+      redButton.onclick = function redBtn() {
+        document.body.style.backgroundColor = "red";
+      };
+
+      //   system - 04 (handle with event listener)
+
+      const purpleButton = document.getElementById("purple-btn");
+      purpleButton.addEventListener("click", purpleBtn);
+
+      function purpleBtn() {
+        document.body.style.backgroundColor = "purple";
+      }
+
+      //   system - 05 (add function directly in event listener)
+
+      const skyBlueButton = document.getElementById("skyblue-btn");
+      skyBlueButton.addEventListener("click", function skyBlueBtn() {
+        document.body.style.backgroundColor = "skyblue";
+      });
+
+      //   system - 06 (short version of add function directly in event listener)
+      //   important
+      document
+        .getElementById("orange-btn")
+        .addEventListener("click", function orangeBtn(params) {
+          document.body.style.backgroundColor = "orange";
+        });
+
+
+
+        //TO ADD COMMENT TO A SECTION
+
+        // step 01 - add event listener to the button
+        document.getElementById('post-btn').addEventListener('click', function postBtn() {
+
+        // step 02 - get the text/value from inside of the text area/input field
+        const newComment = document.getElementById('comment-box');
+        const comment = newComment.value;
+        // console.log(comment);
+
+        /* step 03 - set the comment inside the comment container
+        1. get the comment container
+        2. create new element (p tag as an example for for here)
+        3. set the text of the comment box as innerText of the tag
+        4. add the p tag using appendChild */
+
+        const commentContainer = document.getElementById('comment-section');
+        const pTag = document.createElement('p');
+        pTag.innerText = comment;
+        commentContainer.appendChild(pTag)
+
+        // step 04 - clear the text area
+        newComment.value = '';
+
+        })
+    </script>
+  </body>
+</html>

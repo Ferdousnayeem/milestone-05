@@ -6,6 +6,27 @@
     <title>Delete On Button Press with Confirmation</title>
 </head>
 <body>
-    
+
+
+    <h1 id="text-delete">This text will be deleted on clicked by the delete button.</h1>
+    <input type="text" name="" id="delete-box">
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+
+        document.getElementById('delete-box').addEventListener('keyup', function (event) {
+            const getText = event.target.value;
+            const deleteButton = document.getElementById('delete-btn');
+            if (getText === 'delete') {
+                deleteButton.removeAttribute('disabled')
+            } else {
+                deleteButton.setAttribute('disabled', true)
+            }
+        })
+
+        document.getElementById('delete-btn').addEventListener('click', function () {
+            document.getElementById('text-delete').style.display = 'none'
+        })
+    </script>
 </body>
 </html>

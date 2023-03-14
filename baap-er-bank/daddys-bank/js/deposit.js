@@ -5,6 +5,10 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     const depositField = document.getElementById('user-deposit');
     const depositAmount = depositField.value;
     const convertedDepositAmount = parseFloat(depositAmount);
+    if (isNaN(convertedDepositAmount)) {
+        alert('যা দিবা তা-ই ফেরত পাইবা; ডিম দিলে বদাই ফেরত পাইবা!')
+        return;
+    }
 
     // get total deposit
     const depositBox = document.getElementById('total-deposit');

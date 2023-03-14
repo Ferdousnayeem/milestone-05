@@ -6,15 +6,20 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     const withdrawAmount = withdrawField.value;
     const convertedWithdrawAmount = parseFloat(withdrawAmount);
 
+    if (isNaN(convertedWithdrawAmount)) {
+        alert('User input invalid. Please enter a valid number')
+        return;
+    }
+
     // get total withdraw
     const withdrawBox = document.getElementById('withdraw-amount');
     const withdraw = withdrawBox.innerText;
     const convertedWithdraw = parseFloat(withdraw);
     withdrawBox.innerText = convertedWithdrawAmount.toFixed(2);
-    
-    /* // set total deposit
-    const totalDeposit = convertedDeposit + convertedDepositAmount;
-    depositBox.innerText = totalDeposit; */
+
+    // set total withdraw
+    const totalWithdraw = convertedWithdraw + convertedWithdrawAmount;
+    withdrawBox.innerText = totalWithdraw;
     
     withdrawField.value = '';
 
@@ -22,6 +27,12 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     const balanceBox = document.getElementById('total-balance');
     const balance = balanceBox.innerText;
     const convertedBalance = parseFloat(balance);
+
+
+    if (convertedWithdrawAmount > convertedBalance) {
+        alert('টাকা কি বলদের পিছন দিয়া আসে?');
+        return;
+    }
 
     // set total balance
     const totalBalanceAfterWithdraw = convertedBalance - convertedWithdrawAmount;

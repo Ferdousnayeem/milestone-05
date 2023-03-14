@@ -14,6 +14,19 @@
 
     <script>
 
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 clicked');
+            event.stopImmediatePropagation();
+        });
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 second clicked');
+        });
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 third clicked');
+        });
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('Item-2 fourth clicked');
+
         document.getElementById('delete-box').addEventListener('keyup', function (event) {
             const getText = event.target.value;
             const deleteButton = document.getElementById('delete-btn');

@@ -1,3 +1,4 @@
+// item quantities increase and decrease
 function numberUpdate(isIncrease, getId) {
     const getElementById = document.getElementById(getId);
     const elementString = getElementById.value;
@@ -14,6 +15,8 @@ function numberUpdate(isIncrease, getId) {
     return itemQuantity;
  }
 
+//  price set depending on item quantities
+
  function priceUpdate(priceId, itemQuantity) {
     const getItemPrice = document.getElementById(priceId);
     const itemPriceString = getItemPrice.innerText;
@@ -26,6 +29,8 @@ function numberUpdate(isIncrease, getId) {
        getItemPrice.innerText = itemQuantity * 59;
     }
  }
+
+//  subtotal, tax and total calculation
 
  function totalPriceUpdate() {
     const getCasePrice = document.getElementById('case-price');

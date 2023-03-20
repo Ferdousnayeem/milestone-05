@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/geomatric-logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Geometry Genius</title>
+</head>
+<body>
+    <header class="container bg-color">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+              <div id="home-page" class="">
+                <a class="navbar-brand fs-1 pe-auto" href="index.html">Interactive</a>
+                <p class="fs-4">Geometry Genius</p>
+              </div>
+              <button onclick="switchPage()" id="home-button" class="btn btn-primary px-md-4 pe-auto" type="button"> Blog </button>
+            </div>
+          </nav>
+    </header>
+    <main class="container">
+        <div class="row grid-responsive container">
+            <div class="col-9">
+                <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+                    <div class="col">
+                      <div class="card pt-3 px-3">
+                        <img src="images/triangle.png" class="card-img-top img-fluid" alt="image of a triangle">
+                        <div class="card-body">
+                          <div>
+                            <h5 class="card-title">Triangle</h5>
+                            <p class="card-text">Area (A) = 0.5 X B X H</p>
+                          </div>
+                          <div class="d-flex pt-2">
+                              <div class="d-flex justify-content-around">
+                                  <input class="w-75 h-75" type="text" name="" id="triangle-base" placeholder="B">
+                                  <p>cm</p>
+                              </div>
+                              <div class="d-flex justify-content-around">
+                                <input class="w-75 h-75" type="text" name="" id="triangle-height" placeholder="H">
+                                <p>cm</p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button id="triangle-area-calculate" class="btn btn-primary w-100" type="submit">Calculate</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card pt-3 px-3">
+                        <img src="images/rectangle.png" class="card-img-top" alt="image of a rectangle">
+                        <div class="card-body">
+                          <div>
+                            <h5 class="card-title">Rectangle</h5>
+                            <p class="card-text">Area (A) = W X L</p>
+                          </div>
+                          <div class="d-flex pt-2">
+                              <div class="d-flex justify-content-around">
+                                  <input class="w-75 h-75" type="text" name="" id="rectangle-width" placeholder="W">
+                                  <p>cm</p>
+                              </div>
+                              <div class="d-flex justify-content-around">
+                                <input class="w-75 h-75" type="text" name="" id="rectangle-length" placeholder="L">
+                                <p>cm</p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button id="rectangle-area-calculation" class="btn btn-primary w-100" type="submit">Calculate</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card pt-3 px-3">
+                        <img src="images/parallelogram.png" class="card-img-top" alt="image of a parallelogram">
+                        <div class="card-body">
+                          <div>
+                            <h5 class="card-title">Parallelogram</h5>
+                            <p class="card-text">Area (A) = B X H</p>
+                          </div>
+                          <div class="d-flex pt-2">
+                              <div class="d-flex justify-content-around">
+                                  <input class="w-75 h-75" type="text" name="" id="parallelogram-base" placeholder="B">
+                                  <p>cm</p>
+                              </div>
+                              <div class="d-flex justify-content-around">
+                                <input class="w-75 h-75" type="text" name="" id="parallelogram-height" placeholder="H">
+                                <p>cm</p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button id="parallelogram-area-calculation" class="btn btn-primary w-100" type="submit">Calculate</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card pt-3 px-3">
+                          <img src="images/rhombus.png" class="card-img-top" alt="image of a rhombus">
+                          <div class="card-body">
+                          <div>
+                            <h5 class="card-title">Rhombus</h5>
+                            <p class="card-text">Area (A) = 0.5 X D<sub>1</sub> X D<sub>2</sub></p>
+                          </div>
+                          <div class="d-flex pt-2">
+                              <div class="d-flex justify-content-around">
+                                  <input class="w-75 h-75" type="text" name="" id="diagonal-one" placeholder="D1">
+                                  <p>cm</p>
+                              </div>
+                              <div class="d-flex justify-content-around">
+                                <input class="w-75 h-75" type="text" name="" id="diagonal-two" placeholder="D2">
+                                <p>cm</p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button id="rhombus-area-calculation" class="btn btn-primary w-100" type="submit">Calculate</button>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card pt-3 px-3">
+                          <img src="images/pentagon.png" class="card-img-top w-75 mx-auto" alt="image of a pentagon">
+                          <div class="card-body">
+                          <div>
+                            <h5 class="card-title">Pentagon</h5>
+                            <p class="card-text">Area (A) = 0.5 X b X A</p>
+                          </div>
+                          <div class="d-flex pt-2">
+                              <div class="d-flex justify-content-around">
+                                  <input class="w-75 h-75" type="text" name="" id="pentagon-perimeter" placeholder="P">
+                                  <p>cm</p>
+                              </div>
+                              <div class="d-flex justify-content-around">
+                                <input class="w-75 h-75" type="text" name="" id="pentagon-apothem" placeholder="A">
+                                <p>cm</p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button id="pentagon-area-calculation" class="btn btn-primary w-100" type="submit">Calculate</button>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card pt-3 px-3">
+                          <img src="images/ellipse.png" class="card-img-top" alt="image of an ellipse">
+                          <div class="card-body">
+                          <div>
+                            <h5 class="card-title">Ellipse</h5>
+                            <p class="card-text">Area (A) = &#8508 ab</p>
+                          </div>
+                          <div class="d-flex pt-2">
+                              <div class="d-flex justify-content-around">
+                                  <input class="w-75 h-75" type="text" name="" id="ellipse-length-one" placeholder="a">
+                                  <p>cm</p>
+                              </div>
+                              <div class="d-flex justify-content-around">
+                                <input class="w-75 h-75" type="text" name="" id="ellipse-length-two" placeholder="b">
+                                <p>cm</p>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button id="ellipse-area-calculation" class="btn btn-primary w-100" type="submit">Calculate</button>
+                        </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+            <div class="col row-cols-12">
+                <h2 class="text-decoration-underline">Area Calculation</h2>
+                <div class="">
+                  <ol id="calculation-area"></ol>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="text-white my-3 text-center">
+              Copyright &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved by Ferdaous Nayeem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/random-color.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/triangle-area-calculation.js"></script>
+    <script src="js/rectangle-area-calculation.js"></script>
+    <script src="js/parallelogram-area-calculation.js"></script>
+    <script src="js/rhombus-area-calculation.js"></script>
+    <script src="js/pentagon-area-calculation.js"></script>
+    <script src="js/ellipse-area-calculation.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src=""></script>
+
+    <script>
+
+      function switchPage() {
+        window.location.href = 'blog.html'
+      }
+
+      document.getElementById('home-page').onclick = function () {
+       window.location.href = 'index.html' 
+      }
+
+    </script>
+</body>
+</html>

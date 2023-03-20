@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/geomatric-logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Geometry Genius</title>
+</head>
+<body>
+    <header class="container bg-color">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="">
+                <a class="navbar-brand fs-1" href="index.html">Interactive</a>
+                <p class="fs-4">Geometry Genius</p>
+              </div>
+              <button onclick="switchPage()" id="blog-button" class="btn btn-primary px-md-4 pe-auto" type="button">Home</button>
+            </div>
+          </nav>
+    </header>
+    <main class="container">
+      <div
+          class="text-center d-flex justify-content-center align-items-center flex-column my-5"
+        >
+          <h3 class="fs-3">Frequently Asked Questions</h3>
+          <p class="w-75 mt-3">
+            If you spend a lot of your time answering emails or social media
+            queries, an FAQ can be a real timesaver. It can also help prevent
+            costly and time-consuming returns in your online store.
+          </p>
+        </div>
+
+        <div class="row d-flex flex-row align-items-center">
+          <div class="col-12 col-md-6">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <!-- accordion-01 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    প্রশ্ন-০১ঃ What is DOM and what is the purpose of DOM?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    DOM হলো ইন্টারনেট ব্রাউজার দ্বারা চালিত Document Object Model. জাভাস্ক্রিপ্টে DOM বিভিন্ন প্রোগ্রাম দ্বারা ডকুমেন্টের স্ট্রাকচার, স্টাইল সহ আরো অন্যান্য অনেক কিছু পরিবর্তন এবং পরিবর্ধন করা যায়। DOM তার ডকুমেন্টকে অনুসারে ‍node এবং object রূপে উপস্থাপন করে।
+                  </div>
+                </div>
+              </div>
+              <!-- accordion-02 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    প্রশ্ন-০২ঃ How will you select HTML elements using DOM? Name the DOM methods.
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    ওয়েব ব্রাউজারের ডকুমেন্ট থেকে পাঁচ উপায়ে HTML elements সিলেক্ট করা যায়। যেমন: 
+                    1) getElementsByTagName()
+                    2) getElementsByClassName()
+                    3) getElementById()
+                    4) querySelector()
+                    5) querySelectorAll()
+                  </div>
+                </div>
+              </div>
+              <!-- accordion-03 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    প্রশ্ন-০৩ঃ What is event bubble?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    যদি কোনো child element কে trigger করা হয় তাহলে তার parent element গুলোও ঐ trigger এর মধ্যে পড়ে যায়। এই অবস্থাকে Event bubble বলা হয়। তবে চাইলে event.stopPropagation() এর মাধ্যমে parent element এর trigger হওয়াকে বন্ধ করা যায়।
+                  </div>
+                </div>
+              </div>
+              <!-- accordion-04 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    প্রশ্ন-০৪ঃ What is a callback function and why will you use it?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFour"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    জাভাস্ক্রিপ্টে যখন একটি ফাংশনের প্যারামিটার হিসাবে আরেকটি ফাংশনকে পাঠানো হয়, তখন ঐ ফাংশনকে callback function বলে। 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="image-width">
+              <img class="img-fluid h-25" src="../images/thinking-official.jpg" alt="" srcset="" />
+            </div>
+          </div>
+        </div>    
+    </main>
+    <footer class="bg-dark p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="text-white my-3 text-center">
+              Copyright &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved by Ferdaous Nayeem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js/bootstrap.js"></script>
+
+    <script>
+      function switchPage() {
+        window.location.href = 'index.html'
+      }
+    </script>
+</body>
+</html>

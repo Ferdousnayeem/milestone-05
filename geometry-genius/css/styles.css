@@ -1,0 +1,14 @@
+.bg-color{
+    background: rgba(16, 144, 216, 0.1);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 720px){
+    .grid-responsive{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
